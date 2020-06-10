@@ -3,12 +3,15 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-body {
+/*body {
 	width: 100%;
 	height: 100vh;
-}
+}*/
 .principal {
 	height: 100%;
+	height: 100vh;
+	background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+	display: flex;
 }
 
 /*.cont-texto {
@@ -17,14 +20,26 @@ body {
 	text-align: center;
 	align-items: center ;
 }*/
-.cont-texto h1 {
-	text-align: center;
-	margin: 60px 0 15px 0;
-	font-weight: 600;
+.cont-texto {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
 }
-
+.cont-texto h1 {
+	font-size: 70px;
+	color: #fff;
+	font-family: 'Josefin Sans', sans-serif;
+}
 .linea {
 	border-top: 5px solid black;
+}
+
+.ola {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
 }
 
 .galeria {
@@ -60,7 +75,7 @@ body {
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	background: rgba(128, 128, 128, 0.65);
+	background-image: linear-gradient(to left, #30d0d086 0%, #3308677e 100%);
 	width: 100%;
 	height: 0;
 	transition: 0.55s ease;
@@ -83,6 +98,9 @@ body {
 }
 
 /*---------------------*/
+.contenedor-modal {
+	transition: 2s ease-in-out;
+}
 .contenedor-modal.active {
 	position: fixed;
 	width: 100vw;
@@ -96,6 +114,8 @@ body {
 }
 .contenedor-modal.active img {
 	z-index: 3;
+	width: 800px;
+	height: 800px;
 }
 
 .contenedor-modal.active::after {
@@ -105,5 +125,5 @@ body {
 	height: 100vh;
 	top: 0;
 	left: 0;
-	background-color: rgba(128, 128, 128, 0.644);
+	background-color: rgba(211, 211, 211, 0.459);
 }
