@@ -1,0 +1,109 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	width: 100%;
+	height: 100vh;
+}
+.principal {
+	height: 100%;
+}
+
+/*.cont-texto {
+	width: 50%;
+	height: 100%;
+	text-align: center;
+	align-items: center ;
+}*/
+.cont-texto h1 {
+	text-align: center;
+	margin: 60px 0 15px 0;
+	font-weight: 600;
+}
+
+.linea {
+	border-top: 5px solid black;
+}
+
+.galeria {
+	display: flex;
+	width: 80%;
+	margin: auto;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	z-index: 1;
+}
+
+.galeria .foto {
+	width: 400px;
+	height: 400px;
+	position: relative;
+	margin-bottom: 35px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.75);
+	transition: 0.6s ease;
+}
+.galeria .foto:hover {
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.75);
+}
+
+.foto img {
+	width: 400px;
+	height: 400px;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.overlay {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: rgba(128, 128, 128, 0.65);
+	width: 100%;
+	height: 0;
+	transition: 0.55s ease;
+	overflow: hidden;
+}
+.overlay h2 {
+	color: #fff;
+	font-size: 25px;
+	font-weight: 300;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+.foto:hover .overlay {
+	height: 100%;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+/*---------------------*/
+.contenedor-modal.active {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.contenedor-modal.active img {
+	z-index: 3;
+}
+
+.contenedor-modal.active::after {
+	position: fixed;
+	content: '';
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	background-color: rgba(128, 128, 128, 0.644);
+}
