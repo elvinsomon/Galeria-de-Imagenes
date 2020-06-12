@@ -3,10 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-/*body {
-	width: 100%;
-	height: 100vh;
-}*/
+
 .principal {
 	height: 100%;
 	height: 100vh;
@@ -19,12 +16,6 @@
 	display: flex;
 }
 
-/*.cont-texto {
-	width: 50%;
-	height: 100%;
-	text-align: center;
-	align-items: center ;
-}*/
 .cont-texto {
 	width: 100%;
 	display: flex;
@@ -37,10 +28,6 @@
 	font-family: 'Quicksand', sans-serif;
 	font-weight: 700;
 }
-.linea {
-	border-top: 5px solid black;
-}
-
 .ola {
 	position: absolute;
 	width: 100%;
